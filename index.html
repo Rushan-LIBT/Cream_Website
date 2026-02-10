@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cream | Pure Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#fdfbf7',
+                            100: '#fbf7ee',
+                            200: '#f6ebd6',
+                            300: '#efdbb6',
+                            400: '#e5c48c',
+                            500: '#dda965',
+                            600: '#d18d4f',
+                            700: '#ae6d3f',
+                            800: '#8d5738',
+                            900: '#724731',
+                            950: '#3e251a',
+                        },
+                        sand: '#e6dfd1'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 253, 240, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-bg {
+            background-image: url('./assets/img/hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(221, 169, 101, 0.3);
+        }
+
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-cream-50 text-stone-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 md:px-12 glass-nav">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html"
+                class="text-3xl font-light tracking-widest uppercase text-stone-900 z-50 relative group">
+                Cream<span class="text-cream-500">.</span>
+                <span
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cream-500 transition-all group-hover:w-full duration-500"></span>
+            </a>
+
+            <div class="hidden md:flex space-x-12 items-center">
+                <a href="index.html"
+                    class="text-sm font-medium tracking-wide hover:text-cream-600 transition-colors uppercase">Home</a>
+                <a href="about.html"
+                    class="text-sm font-medium tracking-wide hover:text-cream-600 transition-colors uppercase">About</a>
+                <a href="services.html"
+                    class="text-sm font-medium tracking-wide hover:text-cream-600 transition-colors uppercase">Services</a>
+                <a href="contact.html"
+                    class="px-6 py-2 border border-stone-800 rounded-full text-sm font-medium tracking-wide hover:bg-stone-800 hover:text-cream-50 transition-all uppercase">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 flex flex-col justify-center gap-1.5 w-8 h-8 group">
+                <span class="bg-stone-800 h-0.5 w-full transition-all group-hover:bg-cream-600"></span>
+                <span
+                    class="bg-stone-800 h-0.5 w-3/4 self-end transition-all group-hover:w-full group-hover:bg-cream-600"></span>
+                <span
+                    class="bg-stone-800 h-0.5 w-1/2 self-end transition-all group-hover:w-full group-hover:bg-cream-600"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-cream-50 z-40 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-500">
+            <a href="index.html"
+                class="text-2xl font-light tracking-widest hover:text-cream-600 transition-colors">HOME</a>
+            <a href="about.html"
+                class="text-2xl font-light tracking-widest hover:text-cream-600 transition-colors">ABOUT</a>
+            <a href="services.html"
+                class="text-2xl font-light tracking-widest hover:text-cream-600 transition-colors">SERVICES</a>
+            <a href="contact.html"
+                class="text-2xl font-light tracking-widest hover:text-cream-600 transition-colors">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cream-100 opacity-60 z-0"></div> <!-- Fallback/Overlay -->
+        <div class="absolute inset-0 hero-bg scale-105 transition-transform duration-[20000ms] ease-in-out z-0"
+            id="hero-image"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cream-50/20 to-cream-50 z-10"></div>
+
+        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
+            <p class="text-cream-600 uppercase tracking-[0.3em] text-sm md:text-base mb-6 font-medium">Est. 2024</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-light text-stone-900 mb-8 leading-tight tracking-tight">
+                Simplicity is the <br>
+                <span class="italic font-normal text-cream-600 text-glow">Ultimate</span> form.
+            </h1>
+            <p class="text-stone-600 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                We craft digital experiences that blend aesthetic purity with functional depth. Discover the essence of
+                premium living.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#featured"
+                    class="px-8 py-3 bg-stone-900 text-cream-50 rounded-full hover:bg-cream-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-stone-900/10 tracking-wide font-medium">Explore
+                    Collection</a>
+                <a href="about.html"
+                    class="group flex items-center gap-2 text-stone-800 font-medium hover:text-cream-700 transition-colors">
+                    Our Story
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Section -->
+    <section id="featured" class="py-24 px-6 md:px-12 bg-cream-50 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div class="max-w-xl">
+                    <h2 class="text-4xl md:text-5xl font-light mb-4">Curated Excellence</h2>
+                    <p class="text-stone-500 font-light">Timeless designs for the modern connoisseur.</p>
+                </div>
+                <a href="services.html"
+                    class="hidden md:block text-cream-700 hover:text-stone-900 transition-colors tracking-wide border-b border-cream-700 hover:border-stone-900 pb-1 mt-6 md:mt-0">View
+                    All Services</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] bg-stone-200" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1544717834-52d37c862bc7?q=80&w=1000&auto=format&fit=crop"
+                        alt="Interior"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <p class="text-cream-100 text-xs tracking-widest uppercase mb-2">Architecture</p>
+                        <h3 class="text-2xl text-white font-normal">Modern Spaces</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] bg-stone-200 mt-0 md:-mt-12 shadow-2xl shadow-cream-200/50"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1000&auto=format&fit=crop"
+                        alt="Furniture"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <p class="text-cream-100 text-xs tracking-widest uppercase mb-2">Design</p>
+                        <h3 class="text-2xl text-white font-normal">Essential Living</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] bg-stone-200" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000&auto=format&fit=crop"
+                        alt="Decor"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <p class="text-cream-100 text-xs tracking-widest uppercase mb-2">Lifestyle</p>
+                        <h3 class="text-2xl text-white font-normal">Pure Comfort</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center md:hidden">
+                <a href="services.html"
+                    class="text-cream-700 hover:text-stone-900 transition-colors tracking-wide border-b border-cream-700 hover:border-stone-900 pb-1">View
+                    All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Brand Section -->
+    <section class="py-32 px-6 bg-stone-900 text-cream-50 relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-cream-500 rounded-full blur-[150px] opacity-10 translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-cream-300 rounded-full blur-[150px] opacity-10 -translate-x-1/2 translate-y-1/2">
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10" data-aos="fade-up">
+            <span class="block text-cream-400 font-medium tracking-[0.2em] mb-8 uppercase text-sm">Philosophy</span>
+            <h2 class="text-4xl md:text-6xl font-light leading-snug mb-10">
+                "We believe that true luxury lies in the <span class="italic text-cream-200">absence</span> of the
+                unnecessary."
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20 border-t border-white/10 pt-16">
+                <div class="text-center">
+                    <h4 class="text-3xl font-light text-cream-200 mb-2">150+</h4>
+                    <p class="text-sm tracking-widest text-stone-400 uppercase">Projects</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-3xl font-light text-cream-200 mb-2">Global</h4>
+                    <p class="text-sm tracking-widest text-stone-400 uppercase">Presence</p>
+                </div>
+                <div class="text-center">
+                    <h4 class="text-3xl font-light text-cream-200 mb-2">24/7</h4>
+                    <p class="text-sm tracking-widest text-stone-400 uppercase">Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-24 px-6 md:px-12 bg-cream-100">
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+            <h3 class="text-3xl font-light mb-6 text-stone-800">Join the Circle</h3>
+            <p class="text-stone-500 mb-10 font-light">Subscribe for exclusive updates on new collections and editorial
+                content.</p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address"
+                    class="flex-1 px-6 py-3 bg-white border border-transparent focus:border-cream-400 focus:ring-0 outline-none rounded-full transition-all text-sm placeholder:text-stone-300">
+                <button type="submit"
+                    class="px-8 py-3 bg-stone-900 text-white rounded-full hover:bg-cream-600 transition-colors text-sm font-medium tracking-wide shadow-lg shadow-stone-900/10">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 py-16 px-6 md:px-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <a href="#" class="text-2xl font-light tracking-widest uppercase text-cream-50 mb-6 block">Cream.</a>
+                <p class="text-sm font-light leading-relaxed max-w-xs">
+                    Redefining digital aesthetics with a focus on simplicity, elegance, and user-centric design.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 font-medium mb-6 uppercase tracking-wider text-xs">Explore</h4>
+                <ul class="space-y-4 text-sm font-light">
+                    <li><a href="index.html" class="hover:text-cream-400 transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-cream-400 transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-cream-400 transition-colors">Services</a></li>
+                    <li><a href="contact.html" class="hover:text-cream-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 font-medium mb-6 uppercase tracking-wider text-xs">Social</h4>
+                <ul class="space-y-4 text-sm font-light">
+                    <li><a href="#" class="hover:text-cream-400 transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-cream-400 transition-colors">Behance</a></li>
+                    <li><a href="#" class="hover:text-cream-400 transition-colors">Pinterest</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-cream-50 font-medium mb-6 uppercase tracking-wider text-xs">Contact</h4>
+                <p class="text-sm font-light mb-2">contact@cream.com</p>
+                <p class="text-sm font-light">+94 77 123 4567</p>
+                <p class="text-sm font-light mt-4">Colombo, Sri Lanka</p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 text-xs text-center md:text-left flex flex-col md:flex-row justify-between items-center text-stone-600">
+            <p>&copy; 2024 Cream. All rights reserved.</p>
+            <p class="mt-4 md:mt-0">Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
